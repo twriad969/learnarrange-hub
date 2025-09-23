@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      feedback: {
+        Row: {
+          created_at: string
+          id: string
+          satisfied: boolean
+          thoughts: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          satisfied: boolean
+          thoughts?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          satisfied?: boolean
+          thoughts?: string | null
+        }
+        Relationships: []
+      }
       lessons: {
         Row: {
           created_at: string
@@ -72,6 +93,30 @@ export type Database = {
           id?: string
           name?: string
           position?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      questions: {
+        Row: {
+          created_at: string
+          id: string
+          is_active: boolean
+          question_text: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          question_text: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          question_text?: string
           updated_at?: string
         }
         Relationships: []
