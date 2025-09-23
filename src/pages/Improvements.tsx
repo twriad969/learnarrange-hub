@@ -9,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { CheckCircle2, MessageSquare, Loader2 } from 'lucide-react';
 
 const Improvements = () => {
+  console.log('Improvements component loaded');
   const [satisfied, setSatisfied] = useState<boolean | null>(null);
   const [thoughts, setThoughts] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
